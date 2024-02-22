@@ -22,7 +22,8 @@ class DifferenceArraysArrayLists{
         
         // cannot set an integer, must always be a String since the array was initialized as a String array
         // foodArray[0] = 5;
-
+        // foodArray[5] = "new entry"; // this gives an exception: Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+        // you cannot increase the size of an array after initialization
 
         // ArrayList
         ArrayList<Object> arrayList = new ArrayList<>();
@@ -44,10 +45,13 @@ class DifferenceArraysArrayLists{
         arrayList.set(0, "first element substituted");
         System.out.println("Edited first element: " + arrayList.get(0));
 
+        // increase the size of the ArrayList
+        arrayList.add("new entry");
 
-
-
-
-
+        // print out ArrayList again
+        System.out.println("\nPrint out ArrayList again after adding a new entry:");
+        for(Object entry: arrayList){
+            System.out.println(entry);
+        }
     }
 }
